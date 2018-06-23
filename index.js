@@ -9,13 +9,11 @@ function rot13(str) { // LBH QVQ VG!
 // Change the inputs below to test
 rot13("SERR PBQR PNZC");
 
-/*second,compact version*/
-function rot13(str) { // LBH QVQ VG!
-  return str.split("").map((val) => val.match(/[A-Z]/g) ? val.charCodeAt(val) <= 77 ? String.fromCharCode(val.charCodeAt(val) + 13) : String.fromCharCode(val.charCodeAt(val) - 13) : val).join("");
-}
+/*second,compact version with ES6*/
+const rot13 = (str) => str.split("").map((val) => val.match(/[A-Z]/g) ? val.charCodeAt(val) <= 77 ? String.fromCharCode(val.charCodeAt(val) + 13) : String.fromCharCode(val.charCodeAt(val) - 13) : val).join("");
 
 // Change the inputs below to test
-rot13("SERR PBQR PNZC");
+rot13("PBZCNPG IREFVBA");
 
 /*version 3, with for loop, slice(), replace()*/
 function rot13(str) { // LBH QVQ VG!
